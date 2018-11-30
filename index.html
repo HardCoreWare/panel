@@ -137,7 +137,7 @@
                         <ul>
                             <li class="text-muted menu-title">Menú de Navegación</li>
 							<li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-file-text"></i> <span> Reportes </span> <span class="menu-arrow"></span></a>
+                                <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-file-text"></i> <span> Mensual </span> <span class="menu-arrow"></span></a>
                                 <ul class="list-unstyled">
 
                                     <li><a href="#">Multiservicios</a></li>
@@ -150,9 +150,21 @@
                                 </ul>
                             </li>
 
-                            <li>
-                                <a href="#" class="waves-effect"><i class="zmdi zmdi-view-dashboard"></i> <span> Dashboard </span> </a>
+							<li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-file-text"></i> <span> Mensual Acumulado </span> <span class="menu-arrow"></span></a>
+                                <ul class="list-unstyled">
+
+                                    <li><a href="#">Multiservicios</a></li>
+                                    <li><a href="#">Casa</a></li>
+                                    <li><a href="#">Banco</a></li>
+                                    <li><a href="#">Operadora</a></li>
+                                    <li><a href="#">Grupo</a></li>
+                                    <li><a href="#">Savella</a></li>
+                                   
+                                </ul>
                             </li>
+
+
 
                             <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-view-list"></i> <span> Tablas </span>
@@ -358,6 +370,10 @@
 
        <script>
 
+
+        
+
+
         $(document).ready(function() {
             
             $.ajax({
@@ -377,6 +393,10 @@
             });
 
         });
+
+
+
+
 
         /*
         var elementoJSON = '[{"idCuenta":"1","Concepto":"Salarios","meses":[{"mes":"Enero","subtotal":"20044698.21","llaveDesglose":"1_201801"},{"mes":"Febrero","subtotal":"20044698.21","llaveDesglose":"1_201802"},{"mes":"Marzo","subtotal":"20044698.21","llaveDesglose":"1_201803"},{"mes":"Abril","subtotal":"20044698.21","llaveDesglose":"1_201804"},{"mes":"Mayo","subtotal":"20044698.21","llaveDesglose":"1_201805"}]},{"idCuenta":"2","Concepto":"Aguinaldos","meses":[{"mes":"Enero","subtotal":"20044698.21","llaveDesglose":"2_201801"},{"mes":"Febrero","subtotal":"20044698.21","llaveDesglose":"2_201802"},{"mes":"Marzo","subtotal":"20044698.21","llaveDesglose":"2_201803"},{"mes":"Abril","subtotal":"20044698.21","llaveDesglose":"2_201804"},{"mes":"Mayo","subtotal":"20044698.21","llaveDesglose":"2_201805"}]}]';
