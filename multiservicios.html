@@ -140,12 +140,12 @@
                                 <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-file-text"></i> <span> Mensual </span> <span class="menu-arrow"></span></a>
                                 <ul class="list-unstyled">
 
-                                    <li><a href="#">Multiservicios</a></li>
-                                    <li><a href="#">Casa</a></li>
-                                    <li><a href="#">Banco</a></li>
-                                    <li><a href="#">Operadora</a></li>
-                                    <li><a href="#">Grupo</a></li>
-                                    <li><a href="#">Savella</a></li>
+                                    <li><a href="multiservicios.html">Multiservicios</a></li>
+                                    <li><a href="casa.html">Casa</a></li>
+                                    <li><a href="banco.html">Banco</a></li>
+                                    <li><a href="operadora.html">Operadora</a></li>
+                                    <li><a href="grupo.html">Grupo</a></li>
+                                    <li><a href="savella.html">Savella</a></li>
                                    
                                 </ul>
                             </li>
@@ -291,9 +291,6 @@
        <script>
 
 
-        
-
-
         $(document).ready(function() {
             
             $.ajax({
@@ -313,40 +310,6 @@
             });
 
         });
-
-
-
-
-
-        /*
-        var elementoJSON = '[{"idCuenta":"1","Concepto":"Salarios","meses":[{"mes":"Enero","subtotal":"20044698.21","llaveDesglose":"1_201801"},{"mes":"Febrero","subtotal":"20044698.21","llaveDesglose":"1_201802"},{"mes":"Marzo","subtotal":"20044698.21","llaveDesglose":"1_201803"},{"mes":"Abril","subtotal":"20044698.21","llaveDesglose":"1_201804"},{"mes":"Mayo","subtotal":"20044698.21","llaveDesglose":"1_201805"}]},{"idCuenta":"2","Concepto":"Aguinaldos","meses":[{"mes":"Enero","subtotal":"20044698.21","llaveDesglose":"2_201801"},{"mes":"Febrero","subtotal":"20044698.21","llaveDesglose":"2_201802"},{"mes":"Marzo","subtotal":"20044698.21","llaveDesglose":"2_201803"},{"mes":"Abril","subtotal":"20044698.21","llaveDesglose":"2_201804"},{"mes":"Mayo","subtotal":"20044698.21","llaveDesglose":"2_201805"}]}]';
-        var conversion = JSON.parse(elementoJSON);
-        
-        var tabla = document.getElementById('datatable-buttons').getElementsByTagName('tbody')[0];
-        
-        var fila;
-        for (fila = 0; fila < conversion.length; fila++) { // Recorriendo cada fila del json
-            var nuevaFila = tabla.insertRow(tabla.rows.length); // se agrega una nueva fila a la tabla dinamicamente
-            
-            // se agrega el concepto del registro json
-            nuevaFila.insertCell(0); // dentro de la fila se crea una celda por cada columna
-            nuevaFila.cells[0].innerHTML  = conversion[fila].Concepto; // se agrega el contenido de la celda creada
-            
-            // Analizando cada mes del registro actual
-            var meses = conversion[fila].meses; // se extraen los meses de cada registro
-            var indice;
-            
-            for(indice in meses){ // recorriendo los meses de cada registro
-               var elemento =  meses[indice]; // mes a mes
-               
-               // Agregando los valores de interes
-               nuevaFila.insertCell(parseInt(indice)+1); // dentro de la fila se crea una celda por cada columna
-               nuevaFila.cells[parseInt(indice)+1].innerHTML  = "$"+elemento.subtotal; // se agrega el contenido de la celda creada
-                
-            }
-           
-        }
-        */   
            
       </script>
 
