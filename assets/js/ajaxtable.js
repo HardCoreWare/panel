@@ -3,15 +3,10 @@ class Table{
     constructor(tableId,jsonData){
 
         this.readData(jsonData);
-
         this.decodeData();
-
         this.tableHeaders();
-
         this.tableBody();
-
         this.fullTable();
-
         this.printTable(tableId);
 
     }
@@ -25,9 +20,7 @@ class Table{
     decodeData(){
 
         this.headers=[];
-
         this.matrix=[];
-
         this.size=this.data.length;
 
         console.log(this.size);
@@ -35,17 +28,13 @@ class Table{
         if(this.size>0){
 
             var line=this.data[0];
-
             this.headers=[];
-
             var mensualidades=line.Meses;
-
             var meses =[];
 
             for(var i=0; i<mensualidades.length; i++){
 
                 var mensualidad=mensualidades[i].Mes;
-
                 var mes;
 
                 switch (mensualidad) {
@@ -144,23 +133,18 @@ class Table{
     tableHeaders(){
 
         this.head = '';
-
         this.head+='<thead>';
-
         this.head+='<tr>';
 
         this.headers.forEach(header => {
             
             this.head+='<th>';
-
             this.head+=header;
-
             this.head+='</th>';
 
         });
 
         this.head+='</tr>';
-
         this.head+='</thead>';
 
     }
@@ -168,7 +152,6 @@ class Table{
     tableBody(){
 
         this.body='';
-
         this.body+='<tbody>';
 
         this.matrix.forEach(row => {
@@ -178,9 +161,7 @@ class Table{
             row.forEach(cell => {
                 
                 this.body+='<td>'
-
                 this.body+=cell;
-
                 this.body+='</td>'
 
             });
