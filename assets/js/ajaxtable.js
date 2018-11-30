@@ -110,13 +110,11 @@ class Table{
                 var row=[];
 
                 row.push(line.Concepto);
-
                 var mensuales=line.Meses;
 
                 mensuales.forEach(mensual => {
                     
                     var subtotal=mensual.Subtotal;
-
                     row.push(subtotal);
 
                 });
@@ -124,7 +122,6 @@ class Table{
                 this.matrix.push(row);
 
             });
-
 
         }
 
