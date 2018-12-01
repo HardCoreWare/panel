@@ -1,4 +1,4 @@
-class TableBreakdown{
+class Table{
 
     constructor(tableId,jsonData){
 
@@ -19,19 +19,18 @@ class TableBreakdown{
 
     decodeData(){
 
-        this.headers = [];
-        this.matrix = [];
-        this.keyMatrix = [];
-        this.size = this.data.length;
+        this.headers=[];
+        this.matrix=[];
+        this.size=this.data.length;
 
         console.log(this.size);
 
         if(this.size>0){
 
             var line=this.data[0];
-            this.headers = [];
+            this.headers=[];
             var mensualidades=line.Meses;
-            var meses = [];
+            var meses =[];
 
             for(var i=0; i<mensualidades.length; i++){
 
@@ -109,27 +108,20 @@ class TableBreakdown{
             this.data.forEach(line => {
                 
                 var row=[];
-                var keyRow=[];
 
                 row.push(line.Concepto);
-                keyRow.push(line.Id_Cuenta);
-
                 var mensuales=line.Meses;
 
                 mensuales.forEach(mensual => {
                     
                     var subtotal=mensual.Subtotal;
                     row.push(subtotal);
-                    keyRow.push(mensual.Llave_Desglose);
 
                 });
 
                 this.matrix.push(row);
-                this.keyMatrix.push(keyRow);
 
             });
-
-            console.log(this.keyMatrix);
 
         }
 
@@ -138,14 +130,14 @@ class TableBreakdown{
     tableHeaders(){
 
         this.head = '';
-        this.head += '<thead>';
-        this.head += '<tr>';
+        this.head+='<thead>';
+        this.head+='<tr>';
 
         this.headers.forEach(header => {
             
-            this.head += '<th>';
-            this.head += header;
-            this.head += '</th>';
+            this.head+='<th>';
+            this.head+=header;
+            this.head+='</th>';
 
         });
 
@@ -166,12 +158,7 @@ class TableBreakdown{
             row.forEach(cell => {
                 
                 this.body+='<td>'
-                this.body+='<a id="';
-                // id desglose
-                this.body+='"';               
-                this.body+='>'
                 this.body+=cell;
-                this.body+='</a>'
                 this.body+='</td>'
 
             });
