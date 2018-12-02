@@ -179,7 +179,6 @@ class TableBreakdown{
 
             this.body+='</tr>';
 
-            
         }
 
         this.body+='</tbody>'

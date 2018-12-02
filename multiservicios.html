@@ -274,9 +274,13 @@
         <script src="assets/js/jquery.core.js"></script>
         <script src="assets/js/jquery.app.js"></script>
         <script src="assets/js/ajaxtable.js"></script>
+        <script src="assets/js/request.js"></script>
 
 
+        <!--
         <script type="text/javascript">
+        
+            /*
             $(document).ready(function() {
                 $('#datatable').dataTable();
                 $('#datatable-keytable').DataTable( { keys: true } );
@@ -285,47 +289,16 @@
                 var table = $('#datatable-fixed-header').DataTable( { fixedHeader: true } );
             } );
             TableManageButtons.init();
+            */
 
         </script>
+        -->
 
-       <script>
+        <script>
 
-        function ajaxRequest(url) {
-
-            $(document).ready( function() {
-                
-                $.ajax({
-
-                    url:url,
-
-                    method:"GET",
-
-                    data:"",
-
-                    success:function(response){
-
-                        var tableBreakdown = new TableBreakdown("#datatable-buttons",response);
-
-                        $(".table-breakdown").click(function(){
-
-                            var value = $(this).attr('id');
-
-                            alert(value);
-
-
-                        });
-
-                    }
-
-                });
-
-            });
-            
-        }
-
-        ajaxRequest('back.php');
+            ajaxRequest('back.php','back.php');
         
-      </script>
+        </script>
 
     </body>
 </html>
