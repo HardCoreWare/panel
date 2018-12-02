@@ -159,26 +159,26 @@ class TableBreakdown{
         this.body='';
         this.body+='<tbody>';
 
-        this.matrix.forEach(row => {
+        for(var i=0; i<this.matrix.length; i++){
 
-           this.body+='<tr>'
+            var line=this.matrix[i];
 
-            row.forEach(cell => {
-                
-                this.body+='<td>'
-                this.body+='<a id="';
-                // id desglose
-                this.body+='"';               
-                this.body+='>'
-                this.body+=cell;
-                this.body+='</a>'
-                this.body+='</td>'
+            this.body+='<tr>';
 
-            });
+            for(var j=0; j<line.length; j++){
 
-           this.body+='</tr>';
+                this.body+='<td>';
+                this.body+='<a class = "table-breakdown">';
+                this.body+=this.matrix[i][j];
+                this.body+='</a>';
+                this.body+='<td>';
 
-        });
+            }
+
+            this.body+='</tr>';
+
+            
+        }
 
         this.body+='</tbody>'
 
