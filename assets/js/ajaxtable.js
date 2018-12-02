@@ -171,7 +171,7 @@ class TableBreakdown{
                 this.body+='<a class = "table-breakdown">';
                 this.body+=this.matrix[i][j];
                 this.body+='</a>';
-                this.body+='<td>';
+                this.body+='</td>';
 
             }
 
