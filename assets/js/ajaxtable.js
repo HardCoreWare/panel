@@ -19,20 +19,22 @@ class TableBreakdown{
 
     decodeData(){
 
+        // headers, llaves de desglose y matriz de datos
         this.headers = [];
         this.matrix = [];
         this.keyMatrix = [];
         this.size = this.data.length;
 
-        console.log(this.size);
-
+        // si el tamano es mayor a 0 parseamos los datos
         if(this.size>0){
 
+            // creamos encabezados
             var line=this.data[0];
             this.headers = [];
             var mensualidades=line.Meses;
             var meses = [];
 
+            // creamos los meses basados en su numero
             for(var i=0; i<mensualidades.length; i++){
 
                 var mensualidad=mensualidades[i].Mes;
@@ -129,9 +131,8 @@ class TableBreakdown{
 
             });
 
-            console.log(this.keyMatrix);
-
         }
+        // termina el parseado
 
     }
 
@@ -167,13 +168,25 @@ class TableBreakdown{
 
             for(var j=0; j<line.length; j++){
 
-                this.body+='<td>';
-                this.body+='<a class = "table-breakdown" id = "';
-                this.body+=this.keyMatrix[i][j];
-                this.body+='">';
-                this.body+=this.matrix[i][j];
-                this.body+='</a>';
-                this.body+='</td>';
+                if(j==0){
+
+                    this.body+='<td>';
+                    this.body+=this.matrix[i][j];
+                    this.body+='</td>';
+
+                }
+
+                else{
+
+                    this.body+='<td>';
+                    this.body+='<a class = "table-breakdown" id = "';
+                    this.body+=this.keyMatrix[i][j];
+                    this.body+='">';
+                    this.body+=this.matrix[i][j];
+                    this.body+='</a>';
+                    this.body+='</td>';
+
+                }
 
             }
 

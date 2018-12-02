@@ -1,37 +1,14 @@
 class  Request{
 
+    //
+
     constructor(urlTable,urlBreakdown){
 
-        tableRequest(urlTable,urlBreakdown);
+        this.tableRequest(urlTable,urlBreakdown);
 
     }
 
-    breakdownRequest(urlBreakdown){
-
-        $(".table-breakdown").click(function(){
-    
-            var value = $(this).attr('id');
-
-            $.ajax({
-
-                url:urlBreakdown,
-
-                method:"GET",
-    
-                data:{"req":value},
-
-                success:function(response){
-
-                    console.log(response);
-
-
-                }
-
-            });
-
-        });
-        
-    }
+    //
 
     tableRequest(urlTable,urlBreakdown) {
     
@@ -48,8 +25,28 @@ class  Request{
                 success: function(response){
     
                     var tableBreakdown = new TableBreakdown("#datatable-buttons",response);
+
+                    $(".table-breakdown").click(function(){
     
-                    this.breakdownRequest(urlBreakdown);
+                        var value = $(this).attr('id');
+            
+                        $.ajax({
+            
+                            url:urlBreakdown,
+            
+                            method:"GET",
+                
+                            data:{"req":value},
+            
+                            success:function(response){
+            
+                                alert(response);
+            
+                            }
+            
+                        });
+            
+                    });
     
                 }
     
@@ -58,6 +55,9 @@ class  Request{
         });
         
     }
+
+
+
 
 }
 
