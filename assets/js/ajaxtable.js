@@ -168,7 +168,9 @@ class TableBreakdown{
             for(var j=0; j<line.length; j++){
 
                 this.body+='<td>';
-                this.body+='<a class = "table-breakdown">';
+                this.body+='<a class = "table-breakdown" id = "';
+                this.body+=this.keyMatrix[i][j];
+                this.body+='">';
                 this.body+=this.matrix[i][j];
                 this.body+='</a>';
                 this.body+='</td>';
