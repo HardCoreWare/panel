@@ -1,14 +1,10 @@
-class  Request{
-
-    //
+class  TableRequest{
 
     constructor(urlTable,urlBreakdown){
 
         this.tableRequest(urlTable,urlBreakdown);
 
     }
-
-    //
 
     tableRequest(urlTable,urlBreakdown) {
     
