@@ -1,7 +1,15 @@
 .table-breakdown{
 
- color: antiquewhite;
+    color: antiquewhite;
 
- cursor: pointer;
+    cursor: pointer;
     
+}
+
+td{
+
+    color: antiquewhite;
+
+    cursor: pointer;
+
 }
