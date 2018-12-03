@@ -1,4 +1,4 @@
-class Table{
+class TableReport{
 
     constructor(tableId,jsonData){
 
@@ -64,6 +64,7 @@ class Table{
 
     }
 
+    //
     tableHeaders(){
 
         this.head = '';
@@ -83,6 +84,7 @@ class Table{
 
     }
 
+    //
     tableBody(){
 
         this.body='';
@@ -108,6 +110,7 @@ class Table{
 
     }
 
+    //
     fullTable(){
 
         this.table='';
@@ -116,6 +119,7 @@ class Table{
 
     }
 
+    //
     printTable(tableId){
 
         $(tableId).html(this.table);

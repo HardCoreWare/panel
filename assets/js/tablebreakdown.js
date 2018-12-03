@@ -1,5 +1,6 @@
 class TableBreakdown{
 
+    //
     constructor(tableId,jsonData){
 
         this.readData(jsonData);
@@ -11,12 +12,14 @@ class TableBreakdown{
 
     }
 
+    //
     readData(jsonData){
 
         this.data=JSON.parse(jsonData);
 
     }
 
+    //
     decodeData(){
 
         // headers, llaves de desglose y matriz de datos

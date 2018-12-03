@@ -1,4 +1,4 @@
-class ReportTable{
+class TableBreakdown{
 
     constructor(tableId,jsonData){
 
