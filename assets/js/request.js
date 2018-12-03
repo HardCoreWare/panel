@@ -2,11 +2,11 @@ class  Request{
 
     constructor(urlTable,urlBreakdown,type){
 
-        this.tableRequest(urlTable,urlBreakdown);
+        this.tableRequest(urlTable,urlBreakdown,type);
 
     }
 
-    tableRequest(urlTable,urlBreakdown) {
+    tableRequest(urlTable,urlBreakdown,type) {
     
         $(document).ready( function() {
             
