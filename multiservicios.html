@@ -154,12 +154,12 @@
                                 <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-file-text"></i> <span> Mensual Acumulado </span> <span class="menu-arrow"></span></a>
                                 <ul class="list-unstyled">
 
-                                    <li><a href="#">Multiservicios</a></li>
-                                    <li><a href="#">Casa</a></li>
-                                    <li><a href="#">Banco</a></li>
-                                    <li><a href="#">Operadora</a></li>
-                                    <li><a href="#">Grupo</a></li>
-                                    <li><a href="#">Savella</a></li>
+                                    <li><a href="acumuladomultiservicios.html">Multiservicios</a></li>
+                                    <li><a href="acumuladocasa.html">Casa</a></li>
+                                    <li><a href="acumuladobanco.html">Banco</a></li>
+                                    <li><a href="acumuladooperadora.html">Operadora</a></li>
+                                    <li><a href="acumuladogrupo.html">Grupo</a></li>
+                                    <li><a href="acumuladosavella.html">Savella</a></li>
                                    
                                 </ul>
                             </li>
@@ -271,8 +271,11 @@
         <!-- App js -->
         <script src="assets/js/jquery.core.js"></script>
         <script src="assets/js/jquery.app.js"></script>
-        <script src="assets/js/ajaxtable.js"></script>
-        <script src="assets/js/tablerequest.js"></script>
+        <script src="assets/js/tablebreakdown.js"></script>
+        <script src="assets/js/tablereport.js"></script>
+        <script src="assets/js/tablesingle.js"></script>
+        <script src="assets/js/request.js"></script>
+
 
         <!--
         <script type="text/javascript">
@@ -293,7 +296,7 @@
 
         <script>
 
-            var request = new Request('http://35.243.156.112/balanza/informe/mensual/SERVICIOS','back.php');
+            var request = new Request('http://35.243.156.112/balanza/informe/mensual/SERVICIOS','back.php',0);
         
         </script>
 

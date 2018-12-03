@@ -1,5 +1,6 @@
-class TableBreakdown{
+class TableSingle{
 
+    //
     constructor(tableId,jsonData){
 
         this.readData(jsonData);
@@ -11,12 +12,14 @@ class TableBreakdown{
 
     }
 
+    //
     readData(jsonData){
 
         this.data=JSON.parse(jsonData);
 
     }
 
+    //
     decodeData(){
 
         // headers, llaves de desglose y matriz de datos
@@ -155,7 +158,6 @@ class TableBreakdown{
 
     }
 
-    //
     tableBody(){
 
         this.body='';
@@ -169,25 +171,9 @@ class TableBreakdown{
 
             for(var j=0; j<line.length; j++){
 
-                if(j==0){
-
-                    this.body+='<td>';
-                    this.body+=this.matrix[i][j];
-                    this.body+='</td>';
-
-                }
-
-                else{
-
-                    this.body+='<td>';
-                    this.body+='<a class = "table-breakdown" id = "';
-                    this.body+=this.keyMatrix[i][j];
-                    this.body+='">';
-                    this.body+=this.matrix[i][j];
-                    this.body+='</a>';
-                    this.body+='</td>';
-
-                }
+                this.body+='<td>';
+                this.body+=this.matrix[i][j];
+                this.body+='</td>';
 
             }
 
@@ -199,7 +185,6 @@ class TableBreakdown{
 
     }
 
-    //
     fullTable(){
 
         this.table='';
@@ -208,7 +193,6 @@ class TableBreakdown{
 
     }
 
-    //
     printTable(tableId){
 
         $(tableId).html(this.table);
