@@ -37,7 +37,7 @@ class TableReport{
             
             modulos.forEach(modulo => {
 
-                this.headers.push(modulo);
+                this.headers.push(modulo.Modulo);
 
             });
 
