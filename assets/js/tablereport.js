@@ -31,6 +31,8 @@ class TableReport{
             this.headers=[];
             var modulos=line.Modulos;
 
+            console.log(modulos);
+
             this.headers.push("Concepto");
 
             this.headers
