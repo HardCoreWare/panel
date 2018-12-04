@@ -31,6 +31,8 @@ class TableReport{
             this.headers=[];
             var modulos=line.Modulos;
 
+            console.log(modulos);
+
             this.headers.push("Concepto");
             
             modulos.forEach(modulo => {
@@ -42,8 +44,6 @@ class TableReport{
             //termina headers, empiezan datos
             this.data.forEach(line => {
                 
-                console.log(line);
-
                 var row=[];
 
                 row.push(line.Concepto);
