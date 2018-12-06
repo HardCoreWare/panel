@@ -28,7 +28,9 @@ class  Request{
         
                             var value = $(this).attr('id');
 
-                            urlBreakdown+="/"+=value;
+                            urlBreakdown+="/";
+
+                            urlBreakdown+=value;
                 
                             $.ajax({
                 
