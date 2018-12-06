@@ -42,7 +42,7 @@ class  Request{
 
                                 beforeSend:function(){
 
-                                    console.log(value);
+                                    console.log(urlBreakdown);
 
                                 },
                 
