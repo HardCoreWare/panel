@@ -27,6 +27,8 @@ class  Request{
                         $(".table-breakdown").click(function(){
         
                             var value = $(this).attr('id');
+
+                            urlBreakdown+="/"+=value;
                 
                             $.ajax({
                 
@@ -34,7 +36,13 @@ class  Request{
                 
                                 method:"GET",
                     
-                                data:{"req":value},
+                                data:"",
+
+                                beforeSend:function(){
+
+                                    console.log(value);
+
+                                },
                 
                                 success:function(response){
                 
