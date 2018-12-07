@@ -4,7 +4,7 @@ class TableBreakdown{
     constructor(tableId,jsonData){
 
         this.readData(jsonData);
-        this.decodeData("SUPER CONCEPTO");
+        this.decodeData("FACTOR HUMANO");
         this.tableHeaders();
         this.tableBody();
         this.fullTable();
