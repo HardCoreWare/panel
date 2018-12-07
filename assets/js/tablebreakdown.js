@@ -121,22 +121,17 @@ class TableBreakdown{
 
                 let mensuales=line.Meses;
 
-                let superConcepto=line.Super_Concepto;
+                mensuales.forEach(mensual => {
 
-                if(superConcepto==SuperConcepto){
+                    let subtotal=mensual.Subtotal;
+                    row.push(subtotal);
+                    keyRow.push(mensual.Llave_Desglose);
 
-                    mensuales.forEach(mensual => {
+                });
 
-                        let subtotal=mensual.Subtotal;
-                        row.push(subtotal);
-                        keyRow.push(mensual.Llave_Desglose);
+                this.matrix.push(row);
+                this.keyMatrix.push(keyRow);
 
-                    });
-
-                    this.matrix.push(row);
-                    this.keyMatrix.push(keyRow);
-
-                }
 
             });
 
