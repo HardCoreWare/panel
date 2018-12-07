@@ -213,6 +213,11 @@ class TableBreakdown{
             
             let section = this.body[i];
 
+            this.table+=subheader;
+            this.table+=section;
+
+            
+
         }
 
     }
@@ -222,7 +227,7 @@ class TableBreakdown{
 
         console.log(this.table);
 
-        //$(tableId).html(this.table);
+        $(tableId).html(this.table);
 
     }
 
