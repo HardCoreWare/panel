@@ -156,38 +156,45 @@ class TableBreakdown{
         this.body='';
         this.body+='<tbody>';
 
-        for(let i=0; i<this.cluster.length; i++){
+        for (let h = 0; h < this.cluster.length; h++) {
 
-            let line=this.cluster[i];
+            let matrix=this.cluster[h];
 
-            this.body+='<tr>';
+            for(let i=0; i<matrix.length; i++){
 
-            for(let j=0; j<line.length; j++){
+                let line=matrix[i];
 
-                if(j==0){
+                this.body+='<tr>';
 
-                    this.body+='<td>';
-                    this.body+=this.cluster[i][j];
-                    this.body+='</td>';
+                for(let j=0; j<line.length; j++){
+                    
+
+                    if(j==0){
+
+                        this.body+='<td>';
+                        this.body+=this.cluster[h][i][j];
+                        this.body+='</td>';
+
+                    }
+
+                    else{
+
+                        this.body+='<td>';
+                        this.body+='<a class = "table-breakdown" id = "';
+                        this.body+=this.keyCluster[h][i][j];
+                        this.body+='">';
+                        this.body+=this.cluster[h][i][j];
+                        this.body+='</a>';
+                        this.body+='</td>';
+
+                    }
 
                 }
 
-                else{
-
-                    this.body+='<td>';
-                    this.body+='<a class = "table-breakdown" id = "';
-                    this.body+=this.keyCluster[i][j];
-                    this.body+='">';
-                    this.body+=this.cluster[i][j];
-                    this.body+='</a>';
-                    this.body+='</td>';
-
-                }
+                this.body+='</tr>';
 
             }
-
-            this.body+='</tr>';
-
+            
         }
 
         this.body+='</tbody>'
