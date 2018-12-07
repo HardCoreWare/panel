@@ -187,6 +187,7 @@ class TableBreakdown{
 
                         this.body+='<td>';
                         this.body+=this.cluster[h][i][j];
+                        this.body+='<i class="zmdi zmdi-view-list"></i>';
                         this.body+='</td>';
 
                     }
