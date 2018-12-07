@@ -159,7 +159,17 @@ class TableBreakdown{
 
             this.body+='<tr>'
             this.body+='<td>'
+            this.body+=' '
+            this.body+='</td>'
+            this.body+='</tr>'
+            this.body+='<tr>'
+            this.body+='<td>'
             this.body+=this.superConceptos[h];
+            this.body+='</td>'
+            this.body+='</tr>'
+            this.body+='<tr>'
+            this.body+='<td>'
+            this.body+=' '
             this.body+='</td>'
             this.body+='</tr>'
 
@@ -222,7 +232,6 @@ class TableBreakdown{
     printTable(tableId){
 
         $(tableId).html(this.table);
-
         
     }
 
