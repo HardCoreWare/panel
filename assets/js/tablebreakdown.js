@@ -169,6 +169,8 @@ class TableBreakdown{
                 for(let j=0; j<line.length; j++){
                     
 
+                    let cell = line[j];
+
                     if(j==0){
 
                         this.body+='<td>';
@@ -216,7 +218,7 @@ class TableBreakdown{
             this.table+=subheader;
             this.table+=section;
 
-            
+
 
         }
 
