@@ -208,6 +208,8 @@ class TableBreakdown{
 
         this.table='';
         this.table+=this.head;
+        
+        console.log(this.body);
 
 
     }
@@ -217,8 +219,9 @@ class TableBreakdown{
 
         console.log(this.table);
 
-        //$(tableId).html(this.table);
+        
 
+        
     }
 
 
