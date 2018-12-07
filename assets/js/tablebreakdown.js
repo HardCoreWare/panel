@@ -44,6 +44,7 @@ class TableBreakdown{
                 let mensualidad=mensualidades[i].Mes;
                 let mes;
 
+                // mes de numero a palabra
                 switch (mensualidad) {
 
                     case "1": mes="Enero"; break;
@@ -66,8 +67,10 @@ class TableBreakdown{
 
             }
 
+            //agregamos concepto al header
             this.headers.push("Concepto");
             
+            //agregamos meses al header
             meses.forEach(mes => {
 
                 this.headers.push(mes);
@@ -79,10 +82,13 @@ class TableBreakdown{
 
                 let superConcepto = this.superConceptos[i];
 
+                //creamos matriz temporal e iteramos
                 let matrix=[];
+                let keyMatrix=[];
 
                 this.data.forEach(line => {
 
+                    //solo agregaremos datos a la matriz de coincidir el superconcepto
                     if(line.Super_Concepto == superConcepto){
                     
                         let row=[];
@@ -102,18 +108,25 @@ class TableBreakdown{
                         });
 
                         matrix.push(line);
+                        keyMatrix.push(keyRow);
 
                     }
+                    //acaba el condicional
 
                 });
+                //terminamos de leer matriz
 
                 this.cluster.push(matrix);
+                this.keyCluster.push(keyMatrix);
 
             }
+            // fin de ciclo de superconceptos
 
             console.log(this.cluster);
+            console.log(this.keyCluster);
 
         }
+        // termina el condicional donde existen datos
 
     }
 
