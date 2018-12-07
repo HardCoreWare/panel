@@ -5,8 +5,8 @@ class TableBreakdown{
 
         this.readData(jsonData);
         this.decodeData();
-        //this.tableHeaders();
-        //this.tableBody();
+        this.tableHeaders();
+        this.tableBody();
         //this.fullTable();
         //this.printTable(tableId);
 
