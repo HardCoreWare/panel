@@ -159,8 +159,6 @@ class TableBreakdown{
 
             let matrix=this.cluster[h];
 
-            console.log(matrix);
-
             for(let i=0; i<matrix.length; i++){
 
                 let line=matrix[i];
