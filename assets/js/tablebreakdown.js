@@ -104,7 +104,6 @@ class TableBreakdown{
                             let subtotal=mensual.Subtotal;
                             row.push(subtotal);
                             keyRow.push(mensual.Llave_Desglose);
-                            console.log(subtotal);
 
                         });
 
@@ -222,7 +221,9 @@ class TableBreakdown{
     //
     printTable(tableId){
 
-        $(tableId).html(this.table);
+        console.log(this.table);
+
+        //$(tableId).html(this.table);
 
     }
 
