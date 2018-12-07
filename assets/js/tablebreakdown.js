@@ -217,6 +217,8 @@ class TableBreakdown{
 
     }
 
+    
+
     printTable(tableId){
 
         console.log(this.table);
