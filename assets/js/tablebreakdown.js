@@ -89,27 +89,31 @@ class TableBreakdown{
                 let superConcepto = superConceptos[i];
 
                 let matrix=[];
-                let keyMatrix=[];
 
                 this.data.forEach(line => {
+
+                    if(line.Super_Concepto == superConcepto){
                     
-                    let row=[];
-                    let keyRow=[];
+                        let row=[];
+                        let keyRow=[];
 
-                    row.push(line.Concepto);
-                    keyRow.push(line.Id_Cuenta);
+                        row.push(line.Concepto);
+                        keyRow.push(line.Id_Cuenta);
 
-                    let mensuales=line.Meses;
+                        let mensuales=line.Meses;
 
-                    mensuales.forEach(mensual => {
+                        mensuales.forEach(mensual => {
 
-                        let subtotal=mensual.Subtotal;
-                        row.push(subtotal);
-                        keyRow.push(mensual.Llave_Desglose);
+                            let subtotal=mensual.Subtotal;
+                            row.push(subtotal);
+                            keyRow.push(mensual.Llave_Desglose);
 
-                    });
+                        });
 
-                    matrix.push(line);
+                        matrix.push(line);
+
+                    }
+
 
                 });
 
