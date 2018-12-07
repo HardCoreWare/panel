@@ -69,6 +69,8 @@ class TableBreakdown{
 
             //agregamos concepto al header
             this.headers.push("Concepto");
+            this.headers.push("Grafica");
+
             
             //agregamos meses al header
             meses.forEach(mes => {
@@ -96,6 +98,7 @@ class TableBreakdown{
 
                         row.push(line.Concepto);
                         keyRow.push(line.Id_Cuenta);
+                        row.push("some");
 
                         let mensuales=line.Meses;
 
@@ -187,7 +190,16 @@ class TableBreakdown{
 
                         this.body+='<td>';
                         this.body+=this.cluster[h][i][j];
-                        this.body+='<a><i class="zmdi zmdi-view-list"></i><a/>';
+                        this.body+='</td>';
+
+                    }
+
+                    else if(j==1){
+
+                        this.body+='<td>';
+                        this.body+='<a class="btn btn-success">';
+                        this.body+=this.cluster[h][i][j];
+                        this.body+='<a/>';
                         this.body+='</td>';
 
                     }
