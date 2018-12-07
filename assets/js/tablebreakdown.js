@@ -108,7 +108,7 @@ class TableBreakdown{
 
                         });
 
-                        matrix.push(line);
+                        matrix.push(row);
                         keyMatrix.push(keyRow);
 
                     }
