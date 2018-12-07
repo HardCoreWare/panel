@@ -219,6 +219,8 @@ class TableBreakdown{
 
     printTable(tableId){
 
+        console.log(this.table);
+
         $(tableId).html(this.table);
 
     }
