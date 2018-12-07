@@ -152,9 +152,16 @@ class TableBreakdown{
     tableBody(){
 
         this.body='';
+
         this.body+='<tbody>';
 
         for (let h = 0; h < this.cluster.length; h++) {
+
+            this.body+='<tr>'
+            this.body+='<td>'
+            this.body+=this.superConceptos[h];
+            this.body+='</td>'
+            this.body+='</tr>'
 
             let matrix=this.cluster[h];
 
@@ -173,7 +180,7 @@ class TableBreakdown{
                     if(j==0){
 
                         this.body+='<td>';
-                        this.body+=cell;
+                        this.body+=this.cluster[h][i][j];
                         this.body+='</td>';
 
                     }
@@ -185,7 +192,6 @@ class TableBreakdown{
                         this.body+=this.keyCluster[h][i][j];
                         this.body+='">';
                         this.body+=this.cluster[h][i][j];
-                        console.log(this.cluster[h][i][j]);
                         this.body+='</a>';
                         this.body+='</td>';
 
@@ -208,18 +214,14 @@ class TableBreakdown{
 
         this.table='';
         this.table+=this.head;
-        
-        console.log(this.body);
-
+        this.table+=this.body;
 
     }
 
     //
     printTable(tableId){
 
-        console.log(this.table);
-
-        
+        $(tableId).html(this.table);
 
         
     }
