@@ -168,6 +168,8 @@ class TableBreakdown{
                     
                     let cell = line[j];
 
+                    console.log(cell);
+
                     if(j==0){
 
                         this.body+='<td>';
