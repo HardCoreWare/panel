@@ -7,8 +7,8 @@ class TableBreakdown{
         this.decodeData();
         this.tableHeaders();
         this.tableBody();
-        //this.fullTable();
-        //this.printTable(tableId);
+        this.fullTable();
+        this.printTable(tableId);
 
     }
 
