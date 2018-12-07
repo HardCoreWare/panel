@@ -125,6 +125,7 @@ class TableBreakdown{
 
         }
         // termina el condicional donde existen datos
+        console.log(this.cluster);
 
     }
 
