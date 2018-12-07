@@ -20,7 +20,7 @@ class TableBreakdown{
     }
 
     //
-    decodeData(Super_Concepto){
+    decodeData(SuperConcepto){
 
         // headers, llaves de desglose y matriz de datos
         this.headers = [];
@@ -123,7 +123,7 @@ class TableBreakdown{
 
                 var superConcepto=line.Super_Concepto;
 
-                if(superConcepto==Super_Concepto){
+                if(superConcepto==SuperConcepto){
 
                     mensuales.forEach(mensual => {
 
