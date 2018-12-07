@@ -32,8 +32,6 @@ class RequestTrigger{
             paramUrl += "-";
             paramUrl += modulo;
 
-
-
         });
 
     }
