@@ -121,16 +121,22 @@ class TableBreakdown{
 
                 var mensuales=line.Meses;
 
-                mensuales.forEach(mensual => {
-                    
-                    var subtotal=mensual.Subtotal;
-                    row.push(subtotal);
-                    keyRow.push(mensual.Llave_Desglose);
+                var superConcepto=line.Super_Concepto;
 
-                });
+                if(Super_Concepto=="FACTOR HUMANO"){
 
-                this.matrix.push(row);
-                this.keyMatrix.push(keyRow);
+                    mensuales.forEach(mensual => {
+
+                        var subtotal=mensual.Subtotal;
+                        row.push(subtotal);
+                        keyRow.push(mensual.Llave_Desglose);
+
+                    });
+
+                    this.matrix.push(row);
+                    this.keyMatrix.push(keyRow);
+
+                }
 
             });
 
