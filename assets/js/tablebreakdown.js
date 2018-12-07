@@ -123,7 +123,7 @@ class TableBreakdown{
 
                 var superConcepto=line.Super_Concepto;
 
-                if(Super_Concepto=="FACTOR HUMANO"){
+                if(superConcepto=="FACTOR HUMANO"){
 
                     mensuales.forEach(mensual => {
 
