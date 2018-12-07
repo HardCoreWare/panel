@@ -1,10 +1,10 @@
 class TableBreakdown{
 
     //
-    constructor(tableId,jsonData,SuperConcepto){
+    constructor(tableId,jsonData,superConceptos){
 
         this.readData(jsonData);
-        this.decodeData(SuperConcepto);
+        this.decodeData(superConceptos);
         this.tableHeaders();
         this.tableBody();
         this.fullTable();
@@ -20,7 +20,7 @@ class TableBreakdown{
     }
 
     //
-    decodeData(SuperConcepto){
+    decodeData(superConceptos){
 
         // headers, llaves de desglose y matriz de datos
         this.headers = [];
@@ -45,57 +45,31 @@ class TableBreakdown{
 
                 switch (mensualidad) {
 
-                    case "1": mes="Enero"
-                        
-                        break;
+                    case "1": mes="Enero"; break;
 
-                    case "2": mes="Febrero"
-                        
-                        break;
+                    case "2": mes="Febrero"; break;
 
-                    case "3": mes="Marzo"
-                        
-                        break;
+                    case "3": mes="Marzo"; break;
 
-                    case "4": mes="Abril"
-                        
-                        break;
+                    case "4": mes="Abril"; break;
 
-                    case "5": mes="Mayo"
-                        
-                        break;
+                    case "5": mes="Mayo"; break;
 
-                    case "6": mes="Junio"
-                        
-                        break;
+                    case "6": mes="Junio"; break;
 
-                    case "7": mes="Julio"
-                        
-                        break;
+                    case "7": mes="Julio"; break;
 
-                    case "8": mes="Agosto"
-                        
-                        break;
+                    case "8": mes="Agosto"; break;
 
-                    case "9": mes="Septiembre"
-                        
-                        break;
+                    case "9": mes="Septiembre"; break;
 
-                    case "10": mes="Octubre"
-                        
-                        break;
+                    case "10": mes="Octubre"; break;
 
-                    case "11": mes="Noviembre"
-                        
-                        break;
+                    case "11": mes="Noviembre"; break;
 
-                    case "12": mes="Diciembre"
-                        
-                        break;
+                    case "12": mes="Diciembre"; break;
                 
-                    default:
-
-                        break;
+                    default: break;
                 }
 
                 meses.push(mes);
@@ -110,30 +84,36 @@ class TableBreakdown{
 
             });
 
-            //termina headers, empiezan datos
-            this.data.forEach(line => {
-                
-                let row=[];
-                let keyRow=[];
+            for (let i = 0; i < superConceptos.length; i++) {
 
-                row.push(line.Concepto);
-                keyRow.push(line.Id_Cuenta);
+                let superConcepto = superConceptos[i];
 
-                let mensuales=line.Meses;
+                this.data.forEach(line => {
+                    
+                    let row=[];
+                    let keyRow=[];
 
-                mensuales.forEach(mensual => {
+                    row.push(line.Concepto);
+                    keyRow.push(line.Id_Cuenta);
 
-                    let subtotal=mensual.Subtotal;
-                    row.push(subtotal);
-                    keyRow.push(mensual.Llave_Desglose);
+                    let mensuales=line.Meses;
+
+                    mensuales.forEach(mensual => {
+
+                        let subtotal=mensual.Subtotal;
+                        row.push(subtotal);
+                        keyRow.push(mensual.Llave_Desglose);
+
+                    });
+
+                    this.matrix[i].push(row);
+                    this.keyMatrix[i].push(keyRow);
 
                 });
 
-                this.matrix.push(row);
-                this.keyMatrix.push(keyRow);
+                console.log(this.matrix);
 
-
-            });
+            }
 
         }
         // termina el parseado
