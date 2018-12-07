@@ -32,16 +32,16 @@ class TableBreakdown{
         if(this.size>0){
 
             // creamos encabezados
-            var line=this.data[0];
+            let line=this.data[0];
             this.headers = [];
-            var mensualidades=line.Meses;
-            var meses = [];
+            let mensualidades=line.Meses;
+            let meses = [];
 
             // creamos los meses basados en su numero
-            for(var i=0; i<mensualidades.length; i++){
+            for(let i=0; i<mensualidades.length; i++){
 
-                var mensualidad=mensualidades[i].Mes;
-                var mes;
+                let mensualidad=mensualidades[i].Mes;
+                let mes;
 
                 switch (mensualidad) {
 
@@ -113,21 +113,21 @@ class TableBreakdown{
             //termina headers, empiezan datos
             this.data.forEach(line => {
                 
-                var row=[];
-                var keyRow=[];
+                let row=[];
+                let keyRow=[];
 
                 row.push(line.Concepto);
                 keyRow.push(line.Id_Cuenta);
 
-                var mensuales=line.Meses;
+                let mensuales=line.Meses;
 
-                var superConcepto=line.Super_Concepto;
+                let superConcepto=line.Super_Concepto;
 
                 if(superConcepto==SuperConcepto){
 
                     mensuales.forEach(mensual => {
 
-                        var subtotal=mensual.Subtotal;
+                        let subtotal=mensual.Subtotal;
                         row.push(subtotal);
                         keyRow.push(mensual.Llave_Desglose);
 
@@ -171,13 +171,13 @@ class TableBreakdown{
         this.body='';
         this.body+='<tbody>';
 
-        for(var i=0; i<this.matrix.length; i++){
+        for(let i=0; i<this.matrix.length; i++){
 
-            var line=this.matrix[i];
+            let line=this.matrix[i];
 
             this.body+='<tr>';
 
-            for(var j=0; j<line.length; j++){
+            for(let j=0; j<line.length; j++){
 
                 if(j==0){
 
