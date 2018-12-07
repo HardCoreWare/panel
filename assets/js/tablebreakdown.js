@@ -104,6 +104,7 @@ class TableBreakdown{
                             let subtotal=mensual.Subtotal;
                             row.push(subtotal);
                             keyRow.push(mensual.Llave_Desglose);
+                            console.log(subtotal);
 
                         });
 
@@ -122,8 +123,6 @@ class TableBreakdown{
             }
             // fin de ciclo de superconceptos
 
-            console.log(this.cluster);
-            console.log(this.keyCluster);
 
         }
         // termina el condicional donde existen datos
@@ -214,13 +213,9 @@ class TableBreakdown{
         for (let i = 0; i < this.body.length; i++) {
 
             let subheader='<row><td>'+this.superConceptos[i]+'<td/><row/>';
-            
             let section = this.body[i];
-
             this.table+=subheader;
             this.table+=section;
-
-
 
         }
 
@@ -228,8 +223,6 @@ class TableBreakdown{
 
     //
     printTable(tableId){
-
-        console.log(this.table);
 
         $(tableId).html(this.table);
 
