@@ -157,21 +157,21 @@ class TableBreakdown{
 
         for (let h = 0; h < this.cluster.length; h++) {
 
-            this.body+='<tr>'
-            this.body+='<td>'
-            this.body+=' '
-            this.body+='</td>'
-            this.body+='</tr>'
-            this.body+='<tr>'
-            this.body+='<td>'
+            this.body+='<tr>';
+            this.body+='<th>';
+            this.body+='-------';
+            this.body+='</th>';
+            this.body+='</tr>';
+            this.body+='<tr>';
+            this.body+='<th>';
             this.body+=this.superConceptos[h];
-            this.body+='</td>'
-            this.body+='</tr>'
-            this.body+='<tr>'
-            this.body+='<td>'
-            this.body+=' '
-            this.body+='</td>'
-            this.body+='</tr>'
+            this.body+='</th>';
+            this.body+='</tr>';
+            this.body+='<tr>';
+            this.body+='<th>';
+            this.body+='-------';
+            this.body+='</th>';
+            this.body+='</tr>';
 
             let matrix=this.cluster[h];
 
