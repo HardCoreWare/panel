@@ -23,8 +23,6 @@ class  Request{
                     if(type==0){
 
                         var tableBreakdown = new TableBreakdown("#datatable-buttons",response);
-                        var tableBreakdown1 = new TableBreakdown("#datatable-test",response);
-
 
                         $(".table-breakdown").click(function(){
         
