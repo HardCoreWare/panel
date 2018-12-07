@@ -174,7 +174,7 @@ class TableBreakdown{
                     if(j==0){
 
                         this.body+='<td>';
-                        this.body+=this.cluster[h][i][j];
+                        this.body+=this.cell;
                         this.body+='</td>';
 
                     }
