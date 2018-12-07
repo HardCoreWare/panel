@@ -1,10 +1,10 @@
 class TableBreakdown{
 
     //
-    constructor(tableId,jsonData,superConceptos){
+    constructor(tableId,jsonData){
 
         this.readData(jsonData);
-        this.decodeData(superConceptos);
+        this.decodeData();
         //this.tableHeaders();
         //this.tableBody();
         //this.fullTable();
@@ -16,11 +16,12 @@ class TableBreakdown{
     readData(jsonData){
 
         this.data=JSON.parse(jsonData);
+        this.superConceptos=["FACTOR HUMANO","GASTOS GENERALES"];
 
     }
 
     //
-    decodeData(superConceptos){
+    decodeData(){
 
         // headers, llaves de desglose y matriz de datos
         this.headers = [];
@@ -46,27 +47,16 @@ class TableBreakdown{
                 switch (mensualidad) {
 
                     case "1": mes="Enero"; break;
-
                     case "2": mes="Febrero"; break;
-
                     case "3": mes="Marzo"; break;
-
                     case "4": mes="Abril"; break;
-
                     case "5": mes="Mayo"; break;
-
                     case "6": mes="Junio"; break;
-
                     case "7": mes="Julio"; break;
-
                     case "8": mes="Agosto"; break;
-
                     case "9": mes="Septiembre"; break;
-
                     case "10": mes="Octubre"; break;
-
                     case "11": mes="Noviembre"; break;
-
                     case "12": mes="Diciembre"; break;
                 
                     default: break;
@@ -84,9 +74,10 @@ class TableBreakdown{
 
             });
 
-            for (let i = 0; i < superConceptos.length; i++) {
+            // iteramos superconceptos dados en parametros
+            for (let i = 0; i < this.superConceptos.length; i++) {
 
-                let superConcepto = superConceptos[i];
+                let superConcepto = this.superConceptos[i];
 
                 let matrix=[];
 
@@ -114,7 +105,6 @@ class TableBreakdown{
 
                     }
 
-
                 });
 
                 this.cluster.push(matrix);
@@ -124,11 +114,9 @@ class TableBreakdown{
             console.log(this.cluster);
 
         }
-        // termina el parseado
 
     }
 
-    //
     tableHeaders(){
 
         this.head = '';
@@ -148,7 +136,6 @@ class TableBreakdown{
 
     }
 
-    //
     tableBody(){
 
         this.body='';
@@ -209,9 +196,6 @@ class TableBreakdown{
         $(tableId).html(this.table);
 
     }
-
-    
-    
 
 
 }
