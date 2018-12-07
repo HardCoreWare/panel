@@ -24,8 +24,8 @@ class TableBreakdown{
 
         // headers, llaves de desglose y matriz de datos
         this.headers = [];
-        this.matrix = [];
-        this.keyMatrix = [];
+        this.cluster = [];
+        this.keyCluster = [];
         this.size = this.data.length;
 
         // si el tamano es mayor a 0 parseamos los datos
@@ -88,6 +88,9 @@ class TableBreakdown{
 
                 let superConcepto = superConceptos[i];
 
+                let matrix=[];
+                let keyMatrix=[];
+
                 this.data.forEach(line => {
                     
                     let row=[];
@@ -106,14 +109,16 @@ class TableBreakdown{
 
                     });
 
-                    this.matrix[i].push(row);
-                    this.keyMatrix[i].push(keyRow);
+                    matrix.push(line);
 
                 });
 
-                console.log(this.matrix);
+                this.cluster.push(matrix);
 
             }
+
+            console.log(this.cluster);
+
 
         }
         // termina el parseado
@@ -146,9 +151,9 @@ class TableBreakdown{
         this.body='';
         this.body+='<tbody>';
 
-        for(let i=0; i<this.matrix.length; i++){
+        for(let i=0; i<this.cluster.length; i++){
 
-            let line=this.matrix[i];
+            let line=this.cluster[i];
 
             this.body+='<tr>';
 
@@ -157,7 +162,7 @@ class TableBreakdown{
                 if(j==0){
 
                     this.body+='<td>';
-                    this.body+=this.matrix[i][j];
+                    this.body+=this.cluster[i][j];
                     this.body+='</td>';
 
                 }
@@ -166,9 +171,9 @@ class TableBreakdown{
 
                     this.body+='<td>';
                     this.body+='<a class = "table-breakdown" id = "';
-                    this.body+=this.keyMatrix[i][j];
+                    this.body+=this.keyCluster[i][j];
                     this.body+='">';
-                    this.body+=this.matrix[i][j];
+                    this.body+=this.cluster[i][j];
                     this.body+='</a>';
                     this.body+='</td>';
 
