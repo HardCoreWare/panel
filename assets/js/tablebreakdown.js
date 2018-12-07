@@ -98,7 +98,7 @@ class TableBreakdown{
 
                         row.push(line.Concepto);
                         keyRow.push(line.Id_Cuenta);
-                        row.push("some");
+                        row.push("grafica");
 
                         let mensuales=line.Meses;
 
@@ -197,7 +197,7 @@ class TableBreakdown{
                     else if(j==1){
 
                         this.body+='<td>';
-                        this.body+='<a class="btn btn-success">';
+                        this.body+='<a class="btn btn-outline-info">';
                         this.body+=this.cluster[h][i][j];
                         this.body+='<a/>';
                         this.body+='</td>';
