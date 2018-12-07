@@ -206,7 +206,14 @@ class TableBreakdown{
 
         this.table='';
         this.table+=this.head;
-        this.table+=this.body;
+
+        for (let i = 0; i < this.body.length; i++) {
+
+            let subheader='<row><td>'+this.superConceptos[i]+'<td/><row/>';
+            
+            let section = this.body[i];
+
+        }
 
     }
 
@@ -215,7 +222,7 @@ class TableBreakdown{
 
         console.log(this.table);
 
-        $(tableId).html(this.table);
+        //$(tableId).html(this.table);
 
     }
 
