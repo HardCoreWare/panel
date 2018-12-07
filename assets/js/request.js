@@ -1,11 +1,13 @@
 class  Request{
 
+    //
     constructor(urlTable,urlBreakdown,type){
 
         this.tableRequest(urlTable,urlBreakdown,type);
 
     }
 
+    //
     tableRequest(urlTable,urlBreakdown,type) {
     
         $(document).ready( function() {
@@ -64,10 +66,16 @@ class  Request{
 
                     }
 
-                    else{
+                    else if(type==2){
 
                         var tableSingle = new TableSingle("#datatable-buttons",response);
 
+                    }
+
+                    else{
+                       
+                        
+                        
                     }
     
                 }

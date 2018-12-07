@@ -117,6 +117,7 @@ class TableBreakdown{
 
     }
 
+    //
     tableHeaders(){
 
         this.head = '';
@@ -136,6 +137,7 @@ class TableBreakdown{
 
     }
 
+    //
     tableBody(){
 
         this.body='';
