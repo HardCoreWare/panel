@@ -22,7 +22,9 @@ class  Request{
 
                     if(type==0){
 
-                        var tableBreakdown = new TableBreakdown("#datatable-buttons",response);
+                        var tableBreakdown = new TableBreakdown("#datatable-buttons",response,"FACTOR HUMANO");
+
+                        var tableBreakdown1 = new TableBreakdown("#datatable-test",response,"GASTOS GENERALES");
 
                         $(".table-breakdown").click(function(){
         

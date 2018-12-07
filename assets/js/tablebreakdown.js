@@ -1,10 +1,10 @@
 class TableBreakdown{
 
     //
-    constructor(tableId,jsonData){
+    constructor(tableId,jsonData,SuperConcepto){
 
         this.readData(jsonData);
-        this.decodeData("FACTOR HUMANO");
+        this.decodeData(SuperConcepto);
         this.tableHeaders();
         this.tableBody();
         this.fullTable();
@@ -145,8 +145,7 @@ class TableBreakdown{
 
     }
 
-
-
+    //
     tableHeaders(){
 
         this.head = '';
@@ -166,6 +165,7 @@ class TableBreakdown{
 
     }
 
+    //
     tableBody(){
 
         this.body='';
@@ -209,6 +209,7 @@ class TableBreakdown{
 
     }
 
+    //
     fullTable(){
 
         this.table='';
@@ -217,8 +218,7 @@ class TableBreakdown{
 
     }
 
-    
-
+    //
     printTable(tableId){
 
         console.log(this.table);
@@ -226,5 +226,9 @@ class TableBreakdown{
         $(tableId).html(this.table);
 
     }
+
+    
+    
+
 
 }
