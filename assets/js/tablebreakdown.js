@@ -125,7 +125,6 @@ class TableBreakdown{
 
         }
         // termina el condicional donde existen datos
-        console.log(this.cluster);
 
     }
 
@@ -208,14 +207,6 @@ class TableBreakdown{
         this.table='';
         this.table+=this.head;
 
-        for (let i = 0; i < this.body.length; i++) {
-
-            let subheader='<row><td>'+this.superConceptos[i]+'<td/><row/>';
-            let section = this.body[i];
-            this.table+=subheader;
-            this.table+=section;
-
-        }
 
     }
 
