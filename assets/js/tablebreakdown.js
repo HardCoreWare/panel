@@ -166,7 +166,6 @@ class TableBreakdown{
 
                 for(let j=0; j<line.length; j++){
                     
-
                     let cell = line[j];
 
                     if(j==0){
