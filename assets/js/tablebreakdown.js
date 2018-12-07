@@ -158,9 +158,7 @@ class TableBreakdown{
         for (let h = 0; h < this.cluster.length; h++) {
 
             this.body+='<tr>';
-            this.body+='<th>';
-            this.body+='-------';
-            this.body+='</th>';
+
             this.body+='</tr>';
             this.body+='<tr>';
             this.body+='<th>';
@@ -168,9 +166,7 @@ class TableBreakdown{
             this.body+='</th>';
             this.body+='</tr>';
             this.body+='<tr>';
-            this.body+='<th>';
-            this.body+='-------';
-            this.body+='</th>';
+
             this.body+='</tr>';
 
             let matrix=this.cluster[h];
