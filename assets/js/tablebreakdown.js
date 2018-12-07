@@ -5,10 +5,10 @@ class TableBreakdown{
 
         this.readData(jsonData);
         this.decodeData(superConceptos);
-        this.tableHeaders();
-        this.tableBody();
-        this.fullTable();
-        this.printTable(tableId);
+        //this.tableHeaders();
+        //this.tableBody();
+        //this.fullTable();
+        //this.printTable(tableId);
 
     }
 
@@ -118,7 +118,6 @@ class TableBreakdown{
             }
 
             console.log(this.cluster);
-
 
         }
         // termina el parseado
