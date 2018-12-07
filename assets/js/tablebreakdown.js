@@ -185,6 +185,7 @@ class TableBreakdown{
                         this.body+=this.keyCluster[h][i][j];
                         this.body+='">';
                         this.body+=this.cluster[h][i][j];
+                        console.log(this.cluster[h][i][j]);
                         this.body+='</a>';
                         this.body+='</td>';
 
